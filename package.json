@@ -1,0 +1,12 @@
+{
+  "name": "avasuro-eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config form avasuro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avasuro/eslint-config.git"
+  },
+  "author": "avasuro",
+  "license": "MIT",
+  "homepage": "https://github.com/avasuro/eslint-config#readme"
+}
