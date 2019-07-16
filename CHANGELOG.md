@@ -1,3 +1,7 @@
+2.0.1 / 2019-07-16
+==================
+ - [patch] wrongly published npm package
+
 2.0.0 / 2019-07-15
 ==================
  - [new] added eslint v5 rules 
