@@ -85,7 +85,6 @@ module.exports = {
 
         // enforce a maximum number of classes per file
         // https://eslint.org/docs/rules/max-classes-per-file
-        // TODO: semver-major (eslint 5): enable
         'max-classes-per-file': ['off', 1],
 
         // disallow the use of alert, confirm, and prompt
@@ -453,7 +452,6 @@ module.exports = {
 
         // Disallow characters which are made with multiple code points in character class syntax
         // https://eslint.org/docs/rules/no-misleading-character-class
-        // TODO: enable, semver-major
         'no-misleading-character-class': 'off',
 
         // disallow the use of object properties of the global object (Math and JSON) as functions
@@ -583,7 +581,7 @@ module.exports = {
         'brace-style': ['error', 'stroustrup', {allowSingleLine: true}],
 
         // require camel case names
-        camelcase: ['error', {properties: 'never'}],
+        camelcase: ['error', {properties: 'never', ignoreDestructuring: false}],
 
         // enforce or disallow capitalization of the first letter of a comment
         // http://eslint.org/docs/rules/capitalized-comments
@@ -626,7 +624,8 @@ module.exports = {
         // assigned
         // http://eslint.org/docs/rules/func-name-matching
         'func-name-matching': ['off', 'always', {
-            includeCommonJSModuleExports: false
+            includeCommonJSModuleExports: false,
+            considerPropertyDescriptor: true,
         }],
 
         // require function expressions to have a name
@@ -949,7 +948,6 @@ module.exports = {
 
         // Prefer use of an object spread over Object.assign
         // https://eslint.org/docs/rules/prefer-object-spread
-        // TODO: semver-major (eslint 5): enable
         'prefer-object-spread': 'off',
 
         // require quotes around object literal property names
