@@ -1,3 +1,9 @@
+3.0.0 / 2019-08-21
+==================
+ - [new] added support of eslint v6
+ - [breaking] dropped support of eslint v4
+ - [breaking] dropped support of node.js v4
+
 2.0.1 / 2019-07-16
 ==================
  - [patch] wrongly published npm package
