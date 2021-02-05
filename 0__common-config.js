@@ -1050,7 +1050,19 @@ module.exports = {
         'no-label-var': 'error',
 
         // disallow specific globals
-        'no-restricted-globals': ['error', 'isFinite', 'isNaN'],
+        'no-restricted-globals': [
+            'error',
+            {
+                name: 'isFinite',
+                message:
+                    'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+            },
+            {
+                name: 'isNaN',
+                message:
+                    'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+            },
+        ],
 
         // disallow declaration of variables already declared in the outer scope
         'no-shadow': 'error',
