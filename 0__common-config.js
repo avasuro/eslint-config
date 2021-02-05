@@ -1006,7 +1006,7 @@ module.exports = {
         'spaced-comment': ['error', 'always', {
             line: {
                 exceptions: ['-', '+'],
-                markers: ['=', '!'] // space here to support sprockets directives
+                markers: ['=', '!', '/'] // space here to support sprockets directive, slash for TS /// commentss
             },
             block: {
                 exceptions: ['-', '+'],
