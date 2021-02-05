@@ -69,6 +69,15 @@ module.exports = {
         // require default case in switch statements
         'default-case': ['error', {commentPattern: '^no default$'}],
 
+        // Enforce default clauses in switch statements to be last
+        // https://eslint.org/docs/rules/default-case-last
+        // TODO: enable, semver-minor, when eslint v7 is required (which is a major)
+        'default-case-last': 'off',
+
+        // https://eslint.org/docs/rules/default-param-last
+        // TODO: enable, semver-minor, when eslint v6.4 is required (which is a major)
+        'default-param-last': 'off',
+
         // encourages use of dot notation whenever possible
         'dot-notation': ['error', {allowKeywords: true}],
 
@@ -79,6 +88,11 @@ module.exports = {
         // require the use of === and !==
         // http://eslint.org/docs/rules/eqeqeq
         eqeqeq: ['error', 'always', {null: 'ignore'}],
+
+        // Require grouped accessor pairs in object literals and classes
+        // https://eslint.org/docs/rules/grouped-accessor-pairs
+        // TODO: enable in next major, altho the guide forbids getters/setters anyways
+        'grouped-accessor-pairs': 'off',
 
         // make sure for-in loops have an if statement
         'guard-for-in': 'error',
@@ -96,6 +110,11 @@ module.exports = {
         // disallow lexical declarations in case/default clauses
         // http://eslint.org/docs/rules/no-case-declarations.html
         'no-case-declarations': 'error',
+
+        // Disallow returning value in constructor
+        // https://eslint.org/docs/rules/no-constructor-return
+        // TODO: enable, semver-major
+        'no-constructor-return': 'off',
 
         // disallow division operators explicitly at beginning of regular expression
         // http://eslint.org/docs/rules/no-div-regex
@@ -168,7 +187,7 @@ module.exports = {
         // disallow usage of __iterator__ property
         'no-iterator': 'error',
 
-        // disallow use of labels for anything other then loops and switches
+        // disallow use of labels for anything other than loops and switches
         'no-labels': ['error', {allowLoop: false, allowSwitch: false}],
 
         // disallow unnecessary nested blocks
@@ -203,6 +222,11 @@ module.exports = {
         // disallows creating new instances of String, Number, and Boolean
         'no-new-wrappers': 'error',
 
+        // Disallow \8 and \9 escape sequences in string literals
+        // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+        // todo: semver-major: enable when v7.14 is required
+        'no-nonoctal-decimal-escape': 'off',
+
         // disallow use of (old style) octal literals
         'no-octal': 'error',
 
@@ -232,7 +256,7 @@ module.exports = {
         // disallow usage of __proto__ property
         'no-proto': 'error',
 
-        // disallow declaring the same variable more then once
+        // disallow declaring the same variable more than once
         'no-redeclare': 'error',
 
         // disallow certain object properties
@@ -354,6 +378,10 @@ module.exports = {
         // https://eslint.org/docs/rules/prefer-named-capture-group
         'prefer-named-capture-group': 'off',
 
+        // https://eslint.org/docs/rules/prefer-regex-literals
+        // TODO; enable, semver-minor, once eslint v6.4 is required (which is a major)
+        'prefer-regex-literals': 'off',
+
         // require use of the second argument for parseInt()
         radix: ['error', 'as-needed'],
 
@@ -421,6 +449,11 @@ module.exports = {
         // disallow duplicate arguments in functions
         'no-dupe-args': 'error',
 
+        // Disallow duplicate conditions in if-else-if chains
+        // https://eslint.org/docs/rules/no-dupe-else-if
+        // TODO: enable, semver-major
+        'no-dupe-else-if': 'off',
+
         // disallow duplicate keys when creating object literals
         'no-dupe-keys': 'error',
 
@@ -442,6 +475,10 @@ module.exports = {
         // disallow overwriting functions written as function declarations
         'no-func-assign': 'error',
 
+        // https://eslint.org/docs/rules/no-import-assign
+        // TODO: enable, semver-minor, once eslint v6.4 is required (which is a major)
+        'no-import-assign': 'off',
+
         // disallow function or variable declarations in nested blocks
         'no-inner-declarations': 'error',
 
@@ -451,6 +488,11 @@ module.exports = {
         // disallow irregular whitespace outside of strings and comments
         'no-irregular-whitespace': 'error',
 
+        // Disallow Number Literals That Lose Precision
+        // https://eslint.org/docs/rules/no-loss-of-precision
+        // TODO: enable, semver-minor, once eslint v7.1 is required (which is major)
+        'no-loss-of-precision': 'off',
+
         // Disallow characters which are made with multiple code points in character class syntax
         // https://eslint.org/docs/rules/no-misleading-character-class
         'no-misleading-character-class': 'off',
@@ -458,12 +500,22 @@ module.exports = {
         // disallow the use of object properties of the global object (Math and JSON) as functions
         'no-obj-calls': 'error',
 
+        // Disallow returning values from Promise executor functions
+        // https://eslint.org/docs/rules/no-promise-executor-return
+        // TODO: enable, semver-minor, once eslint v7.3 is required (which is major)
+        'no-promise-executor-return': 'off',
+
         // disallow use of Object.prototypes builtins directly
         // http://eslint.org/docs/rules/no-prototype-builtins
         'no-prototype-builtins': 'off',
 
         // disallow multiple spaces in a regular expression literal
         'no-regex-spaces': 'error',
+
+        // Disallow returning values from setters
+        // https://eslint.org/docs/rules/no-setter-return
+        // TODO: enable, semver-major (altho the guide forbids getters/setters already)
+        'no-setter-return': 'off',
 
         // disallow sparse arrays
         'no-sparse-arrays': 'error',
@@ -479,6 +531,13 @@ module.exports = {
         // disallow unreachable statements after a return, throw, continue, or break statement
         'no-unreachable': 'error',
 
+        // Disallow loops with a body that allows only one iteration
+        // https://eslint.org/docs/rules/no-unreachable-loop
+        // TODO: enable, semver-minor, once eslint v7.3 is required (which is major)
+        'no-unreachable-loop': ['off', {
+            ignore: [], // WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement
+        }],
+
         // disallow return/throw/break/continue inside finally blocks
         // http://eslint.org/docs/rules/no-unsafe-finally
         'no-unsafe-finally': 'error',
@@ -487,13 +546,18 @@ module.exports = {
         // http://eslint.org/docs/rules/no-unsafe-negation
         'no-unsafe-negation': 'error',
 
+        // Disallow useless backreferences in regular expressions
+        // https://eslint.org/docs/rules/no-useless-backreference
+        // TODO: enable, semver-minor, once eslint v7 is required (which is major)
+        'no-useless-backreference': 'off',
+
         // disallow negation of the left operand of an in expression
         // deprecated in favor of no-unsafe-negation
         'no-negated-in-lhs': 'off',
 
         // Disallow assignments that can lead to race conditions due to usage of await or yield
         // https://eslint.org/docs/rules/require-atomic-updates
-        // TODO: enable, semver-major
+        // note: not enabled because it is very buggy
         'require-atomic-updates': 'off',
 
         // disallow comparisons with the value NaN
@@ -617,6 +681,10 @@ module.exports = {
         // enforce newline at the end of file, with no multiple empty lines
         'eol-last': ['error', 'always'],
 
+        // https://eslint.org/docs/rules/function-call-argument-newline
+        // TODO: enable, semver-minor, once eslint v6.2 is required (which is a major)
+        'function-call-argument-newline': ['off', 'consistent'],
+
         // enforce spacing between functions and their invocations
         // http://eslint.org/docs/rules/func-call-spacing
         'func-call-spacing': ['error', 'never'],
@@ -644,7 +712,12 @@ module.exports = {
 
         // Blacklist certain identifiers to prevent them being used
         // http://eslint.org/docs/rules/id-blacklist
+        // TODO: semver-major, remove once eslint v7.4+ is required
         'id-blacklist': 'off',
+
+        // disallow specified identifiers
+        // https://eslint.org/docs/rules/id-denylist
+        'id-denylist': 'off',
 
         // this option enforces minimum and maximum identifier lengths
         // (variable names, property names etc.)
@@ -798,7 +871,7 @@ module.exports = {
         // disallow un-paren"d mixes of different operators
         // http://eslint.org/docs/rules/no-mixed-operators
         'no-mixed-operators': ['error', {
-            // the list of arthmetic groups disallows mixing `%` and `**`
+            // the list of arithmetic groups disallows mixing `%` and `**`
             // with other arithmetic operators.
             groups: [
                 ['%', '**'],
@@ -946,6 +1019,11 @@ module.exports = {
         // Require or disallow padding lines between statements
         // http://eslint.org/docs/rules/padding-line-between-statements
         'padding-line-between-statements': 'off',
+
+        // Disallow the use of Math.pow in favor of the ** operator
+        // https://eslint.org/docs/rules/prefer-exponentiation-operator
+        // TODO: enable, semver-major when eslint 5 is dropped
+        'prefer-exponentiation-operator': 'off',
 
         // Prefer use of an object spread over Object.assign
         // https://eslint.org/docs/rules/prefer-object-spread
@@ -1143,6 +1221,16 @@ module.exports = {
         // disallow symbol constructor
         // http://eslint.org/docs/rules/no-new-symbol
         'no-new-symbol': 'error',
+
+        // Disallow specified names in exports
+        // https://eslint.org/docs/rules/no-restricted-exports
+        // TODO enable, semver-minor, once eslint v7 is required (which is major)
+        'no-restricted-exports': ['off', {
+            restrictedNamedExports: [
+                'default', // use `export default` to provide a default export
+                'then', // this will cause tons of confusion when your module is dynamically `import()`ed
+            ],
+        }],
 
         // disallow specific imports
         // http://eslint.org/docs/rules/no-restricted-imports
