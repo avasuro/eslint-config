@@ -1,3 +1,14 @@
+3.1.0 / 2020-11-28
+==================
+ - [new] added support of eslint v7
+ - [breaking] disallowed empty lines at the beginning of file ([no-multiple-empty-lines](https://eslint.org/docs/rules/no-multiple-empty-lines), option **maxBOF** set)
+ - [breaking] disallowed useless path segments for common.js modules imports ([import/no-useless-path-segments](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md))
+ - [patch] disabled [import/no-extraneous-dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md) rule for [Karma](https://karma-runner.github.io/) and [ESLint](https://eslint.org/) configs (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/876021e5064b57411505308a45952e269311023d))
+ - [patch] allowed triple slash comments (for TypeScript) (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/62afc5cfa4025bd791d5107b3efa573041857455))
+ - [patch] written better error description for restricted globals `isFinite` and `isNaN` (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/c1a444825245267d9548d9396896b18944ee0ce4))
+ - [fix] bad syntax of [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md) rule
+ - [doc] updated installation instructions
+
 3.0.0 / 2019-08-21
 ==================
  - [new] added support of eslint v6
