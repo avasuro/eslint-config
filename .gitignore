@@ -63,3 +63,6 @@ Thumbs.db
 
 # environment variables preset
 .env
+
+# yarn lock file
+yarn.lock

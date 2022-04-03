@@ -1,11 +1,38 @@
+4.0.0 / 2022-04-03
+==========================
+ - [new] added ability to customize indentation and quotes in eslint config per-project
+ - [new] added configuration for React
+ - [new] added configuration for Typescript
+ - [new] added ability to pass environment variable, which will make some rules to only warn instead of error (e.g. in development)
+ - [breaking] the way of initializing the library has changed (see readme.md for more info)
+ - [breaking] disallowed unnecessary boolean casts: [no-extra-boolean-cast](https://eslint.org/docs/rules/no-extra-boolean-cast)
+ - [breaking] enabled [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md) rule
+ - [breaking] enabled [no-constant-condition](https://eslint.org/docs/rules/no-constant-condition) rule
+ - [breaking] enabled [no-console](https://eslint.org/docs/rules/no-console) rule
+ - [breaking] warn in development / error in production if `TODO BEFORE COMMIT` and `TODO BEFORE MERGE` commits used [no-warning-comments](https://eslint.org/docs/rules/no-warning-comments)
+ - [patch] allowed usage of `for in` and `for of` rules: [no-restricted-syntax](https://eslint.org/docs/rules/no-restricted-syntax)
+ - [patch] allowed unnecessary parentheses: [no-extra-parens](https://eslint.org/docs/rules/no-extra-parens)
+ - [patch] disabled [require-default-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md) rule in typescript projects
+ - [patch] warn in development / error in production: [consistent-return](https://eslint.org/docs/rules/consistent-return)
+ - [patch] warn in development / error in production: [no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)
+ - [patch] warn in development / error in production: [no-console](https://eslint.org/docs/rules/no-console)
+ - [patch] warn in development / error in production: [no-constant-condition](https://eslint.org/docs/rules/no-constant-condition)
+ - [patch] warn in development / error in production: [no-debugger](https://eslint.org/docs/rules/no-debugger)
+ - [patch] warn in development / error in production: [no-unused-vars](https://eslint.org/docs/rules/no-unused-vars)
+ - [patch] warn in development / error in production: [react/jsx-boolean-value](https://eslint.org/docs/rules/react/jsx-boolean-value)
+ - [patch] warn in development / error in production: [react/prop-types](https://eslint.org/docs/rules/react/prop-types)
+ - [patch] warn in development / error in production: [react/no-unused-prop-types](https://eslint.org/docs/rules/react/no-unused-prop-types)
+ - [patch] warn in development / error in production: [no-unreachable](https://eslint.org/docs/rules/no-unreachable)
+ - [doc] updated installation instructions
+
 3.1.0 / 2020-11-28
 ==================
  - [new] added support of eslint v7
  - [breaking] disallowed empty lines at the beginning of file ([no-multiple-empty-lines](https://eslint.org/docs/rules/no-multiple-empty-lines), option **maxBOF** set)
  - [breaking] disallowed useless path segments for common.js modules imports ([import/no-useless-path-segments](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md))
- - [patch] disabled [import/no-extraneous-dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md) rule for [Karma](https://karma-runner.github.io/) and [ESLint](https://eslint.org/) configs (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/876021e5064b57411505308a45952e269311023d))
- - [patch] allowed triple slash comments (for TypeScript) (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/62afc5cfa4025bd791d5107b3efa573041857455))
- - [patch] written better error description for restricted globals `isFinite` and `isNaN` (see [this commit](https://bitbucket.org/xbsltd/eslint/commits/c1a444825245267d9548d9396896b18944ee0ce4))
+ - [patch] disabled [import/no-extraneous-dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md) rule for [Karma](https://karma-runner.github.io/) and [ESLint](https://eslint.org/) configs.
+ - [patch] allowed triple slash comments (for TypeScript)
+ - [patch] written better error description for restricted globals `isFinite` and `isNaN`
  - [fix] bad syntax of [import/no-cycle](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md) rule
  - [doc] updated installation instructions
 
@@ -24,7 +51,6 @@
  - [new] added eslint v5 rules 
  - [breaking] minimum supported versions of eslint are: 4.19.1+ and 5.3.0+
  - [breaking] minimum supported version of node: 4+
- - [breaking] package was renamed to "eslint-config-xbsoftware"
  - [breaking] removed "node" from default env settings
  - [breaking] disallowed usage of `isNaN` and `isFinite` functions (use `Number.isNaN` or `Number.isFinite` instead)
  - [breaking] disallowed mixing of '%' and '**' operators with other arithmetic operators
@@ -51,7 +77,7 @@
  - [breaking] removed editorconfig files
  - [non-breaking] allowed to use class methods without this (disabled [class-methods-use-this](https://eslint.org/docs/rules/class-methods-use-this))
  - [non-breaking] allowed to reassign params of functions (disabled [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign))
- - [patch] extended list of file patters that will not forbid the use of devDependencies (for more information see changes in **import/no-extraneous-dependencies** rule in [this commit](https://bitbucket.org/xbsltd/eslint/commits/bc0ca158954d3ecd930860e2e3882ceb91fe181b))
+ - [patch] extended list of file patters that will not forbid the use of devDependencies
  - [patch] updated base ecmaVersion to 2018; removed deprecated experimentalObjectRestSpread option
  - [fix] error "no eslint-plugin-import found" in *1__double_quotes_and_tabs* config
  - [refactor] moved common configs rules to separate file
