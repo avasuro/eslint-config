@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-avasuro",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "ESLint config from avasuro",
   "repository": {
     "type": "git",
